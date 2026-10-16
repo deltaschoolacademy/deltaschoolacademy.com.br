@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delta School Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+</div>
+
+<!-- Loading overlay -->
+<div class="loader" id="loader">
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+  <div class="loader-text">
+    <span class="loader-brand">DELTA SCHOOL ACADEMY</span>
+    <span class="loader-count" id="loaderCount">00</span>
+  </div>
+</div>
+
+<!-- Marquee ticker -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span>Nova turma · Pistol Level 01 · Novembro 2026</span>
+    <span class="ticker-dot">●</span>
+    <span>Vagas limitadas a 10 alunos</span>
+    <span class="ticker-dot">●</span>
+    <span>Blumenau · Santa Catarina</span>
+    <span class="ticker-dot">●</span>
+    <span>Instrutor credenciado + 2 auxiliares</span>
+    <span class="ticker-dot">●</span>
+    <span>Nova turma · Pistol Level 01 · Novembro 2026</span>
+    <span class="ticker-dot">●</span>
+    <span>Vagas limitadas a 10 alunos</span>
+    <span class="ticker-dot">●</span>
+    <span>Blumenau · Santa Catarina</span>
+    <span class="ticker-dot">●</span>
+    <span>Instrutor credenciado + 2 auxiliares</span>
+    <span class="ticker-dot">●</span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <clipPath id="cu00"><polygon points="-12,-12 132,-12 132,-7.3 -12,118.4"/></clipPath>
+        <clipPath id="cl00"><polygon points="-12,130.4 132,4.7 132,132 -12,132"/></clipPath>
+        <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#cu00)"/>
+        <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#cl00)"/>
+        <polygon points="50,76.5 82,38 64,64.1" fill="currentColor"/>
+      </svg>
+      <span class="brand-wordmark">
+        <span class="brand-name">Delta School Academy</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active" data-hover>Cursos</a>
+      <a href="#metodo" data-hover>Método</a>
+      <a href="#contato" data-hover>Contato</a>
+    </nav>
+    <a href="https://wa.me/5547984194956" class="nav-cta" data-hover>
+      <span class="dot-neon"></span>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Vitrine hero -->
+  <section class="vitrine">
+
+    <!-- Hero cinematográfico com equipe -->
+    <div class="hero-stage">
+      <div class="hero-photos">
+        <div class="hero-photo hero-photo-1" style="background-image: url('img/instrutor-1.jpg');"></div>
+        <div class="hero-photo hero-photo-2" style="background-image: url('img/instrutor-3.jpg');"></div>
+        <div class="hero-photo hero-photo-3" style="background-image: url('img/instrutor-2.jpg');"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-main">
+          <span class="hero-line hero-line-1"><span>Formações.</span></span>
+          <span class="hero-line hero-line-2"><span>Delta.</span></span>
+        </h1>
+        <p class="hero-lede fade-up delay-3">
+          Catálogo de cursos de pistola, defesa pessoal e APH tático. Turmas pequenas, instrutor credenciado, método auditável.
+        </p>
+        <div class="hero-motto fade-up delay-3">
+          <span class="motto-item">Formação</span>
+          <span class="motto-dot"></span>
+          <span class="motto-item">Disciplina</span>
+          <span class="motto-dot"></span>
+          <span class="motto-item">Excelência</span>
+        </div>
+      </div>
+      <div class="hero-scroll fade-up delay-3">
+        <span>Role para o catálogo</span>
+        <svg width="12" height="40" viewBox="0 0 12 40" fill="none"><path d="M6 2 V 36 M2 30 L6 36 L10 30" stroke="currentColor" stroke-width="1.2"/></svg>
+      </div>
+    </div>
+
+    <div class="vitrine-head">
+      <div class="vitrine-head-left">
+        <h2 class="vitrine-title-sm">Catálogo</h2>
+        <div class="vitrine-sub">
+          <span class="sub-count">04 cursos ativos</span>
+          <span class="sub-sep"></span>
+          <span class="sub-updated">Novas turmas em novembro</span>
+        </div>
+      </div>
+      <div class="vitrine-head-right">
+        <div class="filter-chips">
+          <button class="chip active" data-hover>
+            <span class="chip-dot"></span>
+            Todos
+          </button>
+          <button class="chip" data-hover>Pistola</button>
+          <button class="chip chip-soon" data-hover disabled>Defesa <span class="chip-soon-tag">em breve</span></button>
+          <button class="chip chip-soon" data-hover disabled>APH <span class="chip-soon-tag">em breve</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção 01: Primeiro contato -->
+    <div class="section-divider">
+      <div class="divider-head">
+        <span class="divider-tag">01</span>
+        <div>
+          <h3 class="divider-title">Primeiro contato</h3>
+          <p class="divider-sub">Para quem quer experimentar antes de entrar na trilha de formação.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience destacado em formato wide -->
+    <div class="feature-grid">
+      <a href="curso.html" class="product product-feature reveal" data-hover>
+        <div class="product-media product-media-wide">
+          <div class="product-img ph-2">
+            <div class="ph-grid"></div>
+            <div class="ph-glow"></div>
+            <svg class="ph-mark" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id="p2u"><polygon points="-12,-12 132,-12 132,-7.3 -12,118.4"/></clipPath>
+              <clipPath id="p2l"><polygon points="-12,130.4 132,4.7 132,132 -12,132"/></clipPath>
+              <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#p2u)"/>
+              <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#p2l)"/>
+              <polygon points="50,76.5 82,38 64,64.1" fill="currentColor"/>
+            </svg>
+            <span class="ph-label">foto · pistol experience</span>
+          </div>
+          <div class="product-overlay">
+            <span class="product-hover-cta">
+              Ver curso
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+            </span>
+          </div>
+        </div>
+        <div class="product-info product-info-feature">
+          <span class="product-kicker">Porta de entrada</span>
+          <h3 class="product-name product-name-xl">
+            Pistol <span class="pipe">|</span> Experience
+          </h3>
+          <p class="product-feature-desc">Imersão de primeiro contato para quem quer experimentar o tiro em ambiente controlado antes de decidir entrar na trilha de formação. Para iniciantes absolutos.</p>
+          <div class="product-foot">
+            <span class="product-duration">3h · 20 disparos · Sem pré-requisito</span>
+            <span class="product-price">R$ 750</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Seção 02: Trilha -->
+    <div class="section-divider section-divider-trilha">
+      <div class="divider-head">
+        <span class="divider-tag">02</span>
+        <div>
+          <h3 class="divider-title">Trilha de formação</h3>
+          <p class="divider-sub">Três níveis em sequência, com critérios objetivos de entrada e saída. Avança-se por competência verificada, não por tempo de curso.</p>
+        </div>
+        <div class="divider-track">
+          <span class="track-step active"><span class="track-num">01</span>Fundamentos</span>
+          <span class="track-line"></span>
+          <span class="track-step"><span class="track-num">02</span>Aplicação</span>
+          <span class="track-line"></span>
+          <span class="track-step"><span class="track-num">03</span>Performance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vitrine-grid vitrine-grid-trilha">
+
+      <!-- Level 01 -->
+      <a href="curso.html" class="product reveal" data-hover style="--i: 0">
+        <div class="product-media">
+          <div class="product-badge">
+            <span class="dot-neon pulse"></span>
+            Nova turma
+          </div>
+          <div class="product-img ph-1">
+            <div class="ph-grid"></div>
+            <div class="ph-glow"></div>
+            <svg class="ph-mark" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id="p1u"><polygon points="-12,-12 132,-12 132,-7.3 -12,118.4"/></clipPath>
+              <clipPath id="p1l"><polygon points="-12,130.4 132,4.7 132,132 -12,132"/></clipPath>
+              <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#p1u)"/>
+              <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#p1l)"/>
+              <polygon points="50,76.5 82,38 64,64.1" fill="currentColor"/>
+            </svg>
+            <span class="ph-label">foto · pistol level 01</span>
+          </div>
+          <div class="product-overlay">
+            <span class="product-hover-cta">
+              Ver curso
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+            </span>
+          </div>
+          <div class="product-level-mark"><span>01</span></div>
+        </div>
+        <div class="product-info">
+          <span class="product-kicker">Fundamentos</span>
+          <h3 class="product-name">
+            Pistol <span class="pipe">|</span> L01
+          </h3>
+          <div class="product-foot">
+            <span class="product-duration">8h · 50 disparos</span>
+            <span class="product-price">R$ 1.290</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Level 02 -->
+      <a href="curso.html" class="product reveal" data-hover style="--i: 1">
+        <div class="product-media">
+          <div class="product-img ph-3">
+            <div class="ph-grid"></div>
+            <div class="ph-glow"></div>
+            <svg class="ph-mark" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id="p3u"><polygon points="-12,-12 132,-12 132,-7.3 -12,118.4"/></clipPath>
+              <clipPath id="p3l"><polygon points="-12,130.4 132,4.7 132,132 -12,132"/></clipPath>
+              <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#p3u)"/>
+              <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#p3l)"/>
+              <polygon points="50,76.5 82,38 64,64.1" fill="currentColor"/>
+            </svg>
+            <span class="ph-label">foto · pistol level 02</span>
+          </div>
+          <div class="product-overlay">
+            <span class="product-hover-cta">
+              Ver curso
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+            </span>
+          </div>
+          <div class="product-level-mark"><span>02</span></div>
+        </div>
+        <div class="product-info">
+          <span class="product-kicker">Aplicação</span>
+          <h3 class="product-name">
+            Pistol <span class="pipe">|</span> L02
+          </h3>
+          <div class="product-foot">
+            <span class="product-duration">8h · 100 disparos</span>
+            <span class="product-price">R$ 2.190</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Level 03 -->
+      <a href="curso.html" class="product reveal" data-hover style="--i: 2">
+        <div class="product-media">
+          <div class="product-badge product-badge-dark">Em breve</div>
+          <div class="product-img ph-4">
+            <div class="ph-grid"></div>
+            <div class="ph-glow"></div>
+            <svg class="ph-mark" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id="p4u"><polygon points="-12,-12 132,-12 132,-7.3 -12,118.4"/></clipPath>
+              <clipPath id="p4l"><polygon points="-12,130.4 132,4.7 132,132 -12,132"/></clipPath>
+              <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#p4u)"/>
+              <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#p4l)"/>
+              <polygon points="50,76.5 82,38 64,64.1" fill="currentColor"/>
+            </svg>
+            <span class="ph-label">foto · pistol level 03</span>
+          </div>
+          <div class="product-overlay">
+            <span class="product-hover-cta">
+              Ver curso
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+            </span>
+          </div>
+          <div class="product-level-mark"><span>03</span></div>
+        </div>
+        <div class="product-info">
+          <span class="product-kicker">Performance</span>
+          <h3 class="product-name">
+            Pistol <span class="pipe">|</span> L03
+          </h3>
+          <div class="product-foot">
+            <span class="product-duration">8h · 150 disparos</span>
+            <span class="product-price">R$ 2.990</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Big statement -->
+  <section class="statement" id="metodo">
+    <div class="statement-inner">
+      <div class="statement-mark reveal">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <clipPath id="scu"><polygon points="-12,-12 132,-12 132,-7.3 -12,118.4"/></clipPath>
+          <clipPath id="scl"><polygon points="-12,130.4 132,4.7 132,132 -12,132"/></clipPath>
+          <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#scu)"/>
+          <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#scl)"/>
+          <polygon points="50,76.5 82,38 64,64.1" fill="currentColor"/>
+        </svg>
+      </div>
+      <h2 class="statement-text motto">
+        <span class="motto-word">Formação</span>
+        <span class="motto-sep">·</span>
+        <span class="motto-word">Disciplina</span>
+        <span class="motto-sep">·</span>
+        <span class="motto-word">Excelência</span>
+      </h2>
+      <div class="statement-numbers">
+        <div class="stat-item reveal">
+          <span class="stat-num"><span class="stat-plus">+</span><span data-count="10500">00000</span></span>
+          <span class="stat-label">Disparos efetuados</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num"><span class="stat-plus">+</span><span data-count="3000">0000</span></span>
+          <span class="stat-label">Horas em stand</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num"><span data-count="0">0</span></span>
+          <span class="stat-label">Incidentes registrados</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-num"><span data-count="100">000</span><span class="stat-pct">%</span></span>
+          <span class="stat-label">Instrutores certificados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact strip with neon accent -->
+  <section class="strip-contact" id="contato">
+    <div class="strip-bg">
+      <div class="noise"></div>
+    </div>
+    <div class="strip-inner">
+      <div class="strip-top">
+        <span class="eyebrow eyebrow-neon">Contato</span>
+        <h2 class="strip-title split-words">Fale com a escola.</h2>
+      </div>
+
+      <div class="contact-row">
+        <a href="https://wa.me/5547984194956" class="contact-item" data-hover>
+          <div class="contact-item-head">
+            <span class="contact-ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <span class="contact-label">WhatsApp</span>
+          </div>
+          <span class="contact-value">47 98419-4956</span>
+          <span class="contact-cta">
+            Abrir conversa
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+          </span>
+        </a>
+
+        <a href="https://instagram.com/deltaschoolacademy" target="_blank" rel="noopener" class="contact-item" data-hover>
+          <div class="contact-item-head">
+            <span class="contact-ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </span>
+            <span class="contact-label">Instagram</span>
+          </div>
+          <span class="contact-value">@deltaschoolacademy</span>
+          <span class="contact-cta">
+            Seguir
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+          </span>
+        </a>
+
+        <a href="https://youtube.com/@deltaschoolacademy" target="_blank" rel="noopener" class="contact-item" data-hover>
+          <div class="contact-item-head">
+            <span class="contact-ico">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </span>
+            <span class="contact-label">YouTube</span>
+          </div>
+          <span class="contact-value">@deltaschoolacademy</span>
+          <span class="contact-cta">
+            Inscreva-se
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer-min">
+  <div class="footer-min-inner">
+    <div class="footer-min-brand">
+      <svg class="brand-mark-svg sm" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <clipPath id="fcu"><polygon points="-12,-12 132,-12 132,-7.3 -12,118.4"/></clipPath>
+        <clipPath id="fcl"><polygon points="-12,130.4 132,4.7 132,132 -12,132"/></clipPath>
+        <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#fcu)"/>
+        <path d="M28 12 H64 C95 12 110 28 110 60 C110 92 95 108 64 108 H28 Z M50 36 H62 C80 36 88 44 88 60 C88 76 80 84 62 84 H50 Z" fill-rule="evenodd" fill="currentColor" clip-path="url(#fcl)"/>
+        <polygon points="50,76.5 82,38 64,64.1" fill="currentColor"/>
+      </svg>
+      <span>Delta School Academy</span>
+    </div>
+    <div class="footer-min-meta">
+      <span>Blumenau · SC</span>
+      <span class="dot-sep"></span>
+      <span>© 2026</span>
+      <span class="dot-sep"></span>
+      <a href="https://instagram.com/deltaschoolacademy" target="_blank" data-hover>Instagram</a>
+      <span class="dot-sep"></span>
+      <a href="https://youtube.com/@deltaschoolacademy" target="_blank" data-hover>YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
