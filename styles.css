@@ -701,24 +701,47 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-radius: 0 !important;
 }
 .product-info-feature {
-  padding: 48px 44px;
+  padding: 72px 72px 72px 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 18px;
+  gap: 24px;
 }
 .product-info-feature .product-kicker {
   color: var(--neon);
-  margin-bottom: 0;
+  margin-bottom: 4px;
 }
 .product-name-xl {
   font-size: clamp(32px, 3.8vw, 48px);
   color: var(--paper) !important;
-  margin-bottom: 0 !important;
+  margin-bottom: 4px !important;
   letter-spacing: -0.03em;
+  line-height: 1.05 !important;
+}
+.product-info-feature .product-feature-desc {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: rgba(242, 241, 236, 0.75);
 }
 .product-info-feature .pipe { color: rgba(242, 241, 236, 0.35); }
 .product-feature:hover .product-name-xl { color: var(--paper) !important; }
+.product-info-feature .product-foot {
+  padding-top: 24px;
+  border-top-color: rgba(242, 241, 236, 0.16);
+}
+.product-info-feature .product-duration {
+  color: rgba(242, 241, 236, 0.55);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+}
+.product-info-feature .product-price {
+  color: var(--paper);
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .product-info-feature { padding: 48px 40px; }
+}
 .product-feature-desc {
   font-size: 15px;
   line-height: 1.55;
@@ -1817,4 +1840,563 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 @media (max-width: 820px) {
   .related-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   ============================================================
+   MOBILE DEDICATED EXPERIENCE
+   Redesenho completo para telas de celular, não só adaptação
+   ============================================================
+   ============================================================ */
+
+@media (max-width: 820px) {
+
+  :root {
+    --gutter: 20px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  /* -------- Ticker mais compacto -------- */
+  .ticker {
+    padding: 8px 0;
+  }
+  .ticker-track {
+    gap: 20px;
+    font-size: 10px;
+    animation-duration: 30s;
+  }
+
+  /* -------- Nav mobile estilo app -------- */
+  .nav {
+    background: rgba(255, 255, 255, 0.96);
+  }
+  .nav-inner {
+    padding: 12px var(--gutter);
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+  }
+  .brand-mark-svg { width: 30px; height: 30px; }
+  .brand-name { font-size: 12.5px; }
+  .nav-cta {
+    padding: 9px 14px;
+    font-size: 12px;
+    gap: 7px;
+  }
+
+  /* -------- Hero vertical nativo -------- */
+  .vitrine { padding: 0 var(--gutter) 60px; }
+
+  .hero-stage {
+    height: calc(100vh - 100px);
+    min-height: 560px;
+    max-height: 760px;
+    margin: 16px 0 40px;
+  }
+  .hero-photos {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr !important;
+    gap: 0;
+  }
+  .hero-photo-1, .hero-photo-3 { display: none !important; }
+  .hero-photo-2 {
+    display: block !important;
+    background-position: center 15% !important;
+  }
+  .hero-overlay {
+    background:
+      linear-gradient(to bottom, rgba(11, 11, 9, 0.4) 0%, rgba(11, 11, 9, 0.1) 30%, rgba(11, 11, 9, 0.9) 100%);
+  }
+  .hero-content {
+    padding: 40px var(--gutter) 36px;
+    justify-content: flex-end;
+  }
+  .hero-main {
+    font-size: clamp(56px, 15vw, 88px);
+    line-height: 0.9;
+    letter-spacing: -0.045em;
+    margin-bottom: 20px;
+  }
+  .hero-lede {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    max-width: none;
+  }
+  .hero-motto {
+    gap: 10px;
+    padding-top: 18px;
+    justify-content: flex-start;
+  }
+  .motto-item {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .motto-dot {
+    width: 5px; height: 5px;
+  }
+  .hero-scroll { display: none; }
+
+  /* -------- Vitrine head mobile -------- */
+  .vitrine-head {
+    grid-template-columns: 1fr !important;
+    align-items: start !important;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  .vitrine-title-sm {
+    font-size: 32px;
+    letter-spacing: -0.03em;
+  }
+  .vitrine-sub {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+  .filter-chips {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 8px;
+    gap: 6px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .filter-chips::-webkit-scrollbar { display: none; }
+  .chip {
+    padding: 9px 14px;
+    font-size: 12.5px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* -------- Section divider compact mobile -------- */
+  .section-divider { margin: 40px 0 20px; }
+  .section-divider-trilha { margin-top: 56px; }
+  .divider-head {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+    padding: 16px 0 20px;
+  }
+  .divider-tag {
+    justify-self: start;
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+  .divider-title {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+  .divider-sub {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .divider-track {
+    overflow-x: auto;
+    gap: 6px;
+    padding: 10px 12px;
+    scrollbar-width: none;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .divider-track::-webkit-scrollbar { display: none; }
+  .track-step {
+    font-size: 10.5px;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .track-num {
+    width: 20px; height: 20px;
+    font-size: 9.5px;
+  }
+  .track-line {
+    width: 14px;
+    flex-shrink: 0;
+  }
+
+  /* -------- Pistol Experience featured em mobile = card vertical -------- */
+  .product-feature {
+    grid-template-columns: 1fr !important;
+    border-radius: 4px;
+  }
+  .product-media-wide {
+    aspect-ratio: 16 / 10 !important;
+    min-height: 240px !important;
+    border-radius: 0 !important;
+  }
+  .product-info-feature {
+    padding: 28px 24px 32px !important;
+    gap: 14px !important;
+  }
+  .product-info-feature .product-kicker {
+    font-size: 10.5px;
+  }
+  .product-name-xl {
+    font-size: 32px !important;
+    line-height: 1.0 !important;
+  }
+  .product-feature-desc {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* -------- Trilha em carrossel horizontal com swipe -------- */
+  .vitrine-grid-trilha {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 4px 0 16px;
+    margin: 0 calc(var(--gutter) * -1);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-padding-left: var(--gutter);
+  }
+  .vitrine-grid-trilha::-webkit-scrollbar { display: none; }
+  .vitrine-grid-trilha .product {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+  .vitrine-grid-trilha .product-media {
+    aspect-ratio: 4 / 5;
+    margin-bottom: 14px;
+  }
+  .product-level-mark {
+    width: 36px; height: 36px;
+    font-size: 11px;
+  }
+  .vitrine-grid-trilha .product-name {
+    font-size: 20px;
+  }
+
+  /* -------- Statement e stats compactos -------- */
+  .statement {
+    padding: 72px var(--gutter) 72px;
+  }
+  .statement-mark {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 36px;
+  }
+  .statement-text,
+  .motto {
+    font-size: 30px !important;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 56px;
+  }
+  .motto {
+    gap: 10px !important;
+  }
+  .statement-numbers {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px 16px !important;
+    padding-top: 40px;
+  }
+  .stat-num {
+    font-size: 38px !important;
+  }
+  .stat-label {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  /* -------- Contact strip bottom-sheet-ish -------- */
+  .strip-contact {
+    padding: 72px var(--gutter) 56px;
+  }
+  .strip-inner {
+    gap: 36px;
+  }
+  .strip-title {
+    font-size: 36px !important;
+    letter-spacing: -0.03em;
+  }
+  .contact-row {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+  .contact-item {
+    padding: 20px !important;
+    gap: 14px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-item-head {
+    gap: 10px;
+    flex: 1;
+  }
+  .contact-ico {
+    width: 36px; height: 36px;
+    flex-shrink: 0;
+  }
+  .contact-ico svg { width: 18px; height: 18px; }
+  .contact-label {
+    display: none;
+  }
+  .contact-value {
+    font-size: 15px;
+    line-height: 1.2;
+    display: block;
+  }
+  .contact-item-head::after {
+    content: attr(data-label);
+  }
+  .contact-cta {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-left: 10px;
+    border-top: none !important;
+    display: inline-flex;
+    gap: 0;
+    font-size: 0 !important;
+    letter-spacing: 0 !important;
+    color: var(--neon);
+    flex-shrink: 0;
+  }
+  .contact-cta svg {
+    width: 20px; height: 20px;
+    flex-shrink: 0;
+  }
+  .contact-item-head::after {
+    content: none;
+  }
+
+  /* -------- Footer mobile -------- */
+  .footer-min {
+    padding: 24px var(--gutter);
+  }
+  .footer-min-inner {
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .footer-min-brand { font-size: 12.5px; gap: 10px; }
+  .footer-min-meta {
+    font-size: 10.5px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* -------- Floating WhatsApp bottom bar sempre visível -------- */
+  body { padding-bottom: 72px; }
+
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 72px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    z-index: 90;
+    pointer-events: none;
+  }
+
+  .mobile-cta {
+    position: fixed;
+    bottom: 12px; left: 12px; right: 12px;
+    z-index: 91;
+    display: flex;
+    gap: 8px;
+  }
+  .mobile-cta .btn-mobile {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 20px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    transition: background 200ms var(--ease);
+  }
+  .mobile-cta .btn-mobile:hover {
+    background: var(--olive);
+  }
+  .mobile-cta .btn-mobile svg {
+    width: 16px; height: 16px;
+  }
+
+  /* -------- Course page mobile (PDP) -------- */
+  .breadcrumb {
+    padding: 20px var(--gutter) 0;
+    font-size: 10px;
+    gap: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  .breadcrumb::-webkit-scrollbar { display: none; }
+
+  .pdp {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding: 24px var(--gutter) 80px !important;
+  }
+
+  .pdp-gallery {
+    position: relative !important;
+    top: 0 !important;
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    margin: 0 calc(var(--gutter) * -1);
+    padding: 0 var(--gutter);
+    scrollbar-width: none;
+    scroll-padding: var(--gutter);
+  }
+  .pdp-gallery::-webkit-scrollbar { display: none; }
+  .pdp-gallery .main {
+    flex: 0 0 85%;
+    grid-column: unset !important;
+    scroll-snap-align: start;
+    aspect-ratio: 4 / 5 !important;
+  }
+  .pdp-gallery .thumb {
+    flex: 0 0 85%;
+    aspect-ratio: 4 / 5 !important;
+    scroll-snap-align: start;
+  }
+
+  .pdp-info { padding: 0 !important; }
+
+  .pdp-tag {
+    font-size: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pdp-tag .live {
+    padding: 3px 8px 3px 6px;
+    font-size: 9px;
+  }
+
+  .pdp-title {
+    font-size: 44px !important;
+    letter-spacing: -0.035em !important;
+    line-height: 0.95 !important;
+    margin-bottom: 14px;
+  }
+  .pdp-sub {
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .invest {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding: 28px 0 24px !important;
+    margin-bottom: 24px;
+  }
+  .invest-value {
+    font-size: 54px !important;
+  }
+  .invest-currency { font-size: 18px; }
+  .invest-terms { font-size: 12px; }
+  .invest-includes li {
+    font-size: 13px;
+  }
+
+  .spec-line {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1px !important;
+    background: var(--line);
+    padding: 1px !important;
+    border: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+  .spec-cell {
+    padding: 14px 12px !important;
+    background: var(--paper);
+    flex: unset !important;
+  }
+  .spec-cell + .spec-cell::before { display: none !important; }
+  .spec-k { font-size: 9px; }
+  .spec-v {
+    font-size: 24px !important;
+  }
+
+  .btn-buy {
+    padding: 18px 24px !important;
+    font-size: 14px !important;
+  }
+
+  .pdp-section {
+    padding: 20px 0;
+  }
+  .pdp-section-head h3 {
+    font-size: 14.5px;
+  }
+
+  .modules li {
+    grid-template-columns: 40px 1fr auto !important;
+    gap: 12px !important;
+    padding: 14px 0 !important;
+  }
+  .modules .num {
+    font-size: 10px;
+  }
+  .modules .name {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .modules .time {
+    font-size: 10px;
+  }
+
+  .fits li {
+    font-size: 14px !important;
+    padding: 8px 0 !important;
+  }
+
+  /* Related mobile em carrossel */
+  .related {
+    padding: 60px var(--gutter) 60px;
+  }
+  .related-head {
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+  }
+  .related h2 {
+    font-size: 22px;
+  }
+  .related-link {
+    font-size: 10px;
+  }
+  .related-grid {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px !important;
+    margin: 0 calc(var(--gutter) * -1);
+    padding: 0 var(--gutter);
+    scrollbar-width: none;
+    scroll-padding-left: var(--gutter);
+  }
+  .related-grid::-webkit-scrollbar { display: none; }
+  .related-grid .product {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+}
+
+/* Telas muito pequenas (iPhone SE etc) */
+@media (max-width: 380px) {
+  .hero-main { font-size: 48px !important; }
+  .vitrine-title-sm { font-size: 28px; }
+  .statement-text, .motto { font-size: 26px !important; }
+  .pdp-title { font-size: 38px !important; }
+  .invest-value { font-size: 46px !important; }
 }
