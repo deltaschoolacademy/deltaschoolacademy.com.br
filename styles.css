@@ -701,11 +701,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-radius: 0 !important;
 }
 .product-info-feature {
-  padding: 72px 72px 72px 64px;
+  padding: 80px 80px 80px 72px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  gap: 26px;
 }
 .product-info-feature .product-kicker {
   color: var(--neon);
@@ -739,8 +739,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 20px;
   font-weight: 700;
 }
-@media (max-width: 1024px) {
-  .product-info-feature { padding: 48px 40px; }
+@media (max-width: 1180px) {
+  .product-info-feature { padding: 56px 48px; }
+}
+@media (max-width: 940px) {
+  .product-feature {
+    grid-template-columns: 1fr !important;
+  }
+  .product-media-wide {
+    aspect-ratio: 21 / 9 !important;
+    min-height: 320px !important;
+  }
+  .product-info-feature {
+    padding: 56px 56px 52px !important;
+  }
 }
 .product-feature-desc {
   font-size: 15px;
@@ -2025,6 +2037,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .product-feature {
     grid-template-columns: 1fr !important;
     border-radius: 4px;
+    overflow: hidden;
   }
   .product-media-wide {
     aspect-ratio: 16 / 10 !important;
@@ -2032,8 +2045,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     border-radius: 0 !important;
   }
   .product-info-feature {
-    padding: 28px 24px 32px !important;
-    gap: 14px !important;
+    padding: 40px 32px 44px !important;
+    gap: 18px !important;
   }
   .product-info-feature .product-kicker {
     font-size: 10.5px;
@@ -2044,7 +2057,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .product-feature-desc {
     font-size: 14px !important;
-    line-height: 1.55 !important;
+    line-height: 1.6 !important;
+  }
+  .product-info-feature .product-foot {
+    padding-top: 20px !important;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   /* -------- Trilha em carrossel horizontal com swipe -------- */
