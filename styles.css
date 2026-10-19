@@ -1849,7 +1849,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    ============================================================
    ============================================================ */
 
+/* Desktop: mobile CTA escondido */
+.mobile-cta { display: none; }
+
 @media (max-width: 820px) {
+
+  .mobile-cta { display: flex !important; }
 
   :root {
     --gutter: 20px;
@@ -2169,18 +2174,45 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
   /* -------- Footer mobile -------- */
   .footer-min {
-    padding: 24px var(--gutter);
+    padding: 36px var(--gutter) 32px;
+    background: var(--paper-dim);
+    border-top: 1px solid var(--line);
   }
   .footer-min-inner {
     flex-direction: column;
-    gap: 14px;
-    align-items: flex-start;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
   }
-  .footer-min-brand { font-size: 12.5px; gap: 10px; }
+  .footer-min-brand {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+  .footer-min-brand .brand-mark-svg {
+    width: 32px; height: 32px;
+  }
   .footer-min-meta {
-    font-size: 10.5px;
+    font-size: 10px;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    width: 100%;
+  }
+  .footer-min-meta a {
+    color: var(--olive);
+    font-weight: 600;
+  }
+  .dot-sep {
+    width: 2px; height: 2px;
+    background: var(--ink-mute);
   }
 
   /* -------- Floating WhatsApp bottom bar sempre visível -------- */
