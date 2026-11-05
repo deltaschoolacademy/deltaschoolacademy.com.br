@@ -1140,6 +1140,8 @@ body:has(.page-hero) .nav {
 body:has(.page-hero) .nav-links a { color: #F2F1EC; }
 body:has(.page-hero) .nav-links a::after { background: var(--neon); }
 body:has(.page-hero) .nav .brand { color: #F2F1EC; }
+body:has(.page-hero) .nav .brand-mark-svg { color: #F2F1EC; }
+body:has(.page-hero) .nav .brand-name { color: #F2F1EC; }
 body:has(.page-hero) .nav-cta {
   background: #F2F1EC;
   color: #0B0B09;
