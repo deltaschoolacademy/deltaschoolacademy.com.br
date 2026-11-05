@@ -593,19 +593,38 @@
 }
 .authority-head {
   max-width: 1400px;
-  margin: 0 auto 80px;
+  margin: 0 auto 60px;
   text-align: left;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 60px;
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.authority-head .section-title {
+  margin: 0;
+  max-width: 820px;
 }
 .authority-head .section-sub {
-  max-width: 400px;
-  text-align: right;
+  max-width: 580px;
+  text-align: left;
   color: var(--ink);
   font-weight: 500;
   opacity: 0.85;
+  font-size: 17px;
+  margin: 0;
+}
+
+/* Fallback title-mask: se o observer não disparar em 400ms, revela o título */
+.title-mask .tm-line .tm-inner {
+  animation: tm-safety-reveal 800ms cubic-bezier(0.16, 1, 0.3, 1) 400ms forwards;
+}
+@keyframes tm-safety-reveal {
+  from { transform: translateY(110%); }
+  to { transform: translateY(0); }
+}
+/* Observer: quando dispara, transition instantânea sobrepõe a animation */
+.title-mask.in-view .tm-line .tm-inner {
+  animation: none;
+  transform: translateY(0);
 }
 
 /* Banner YouTube clicável */
@@ -1358,7 +1377,7 @@ body:has(.page-hero) .footer-v3-base { color: rgba(242,241,236,0.5); }
   color: var(--neon);
   margin-bottom: 20px;
 }
-.section-title {
+body:has(.page-hero) .section-title {
   font-family: var(--font-sans);
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 800;
@@ -1367,7 +1386,7 @@ body:has(.page-hero) .footer-v3-base { color: rgba(242,241,236,0.5); }
   color: var(--paper);
   margin: 0 0 24px;
 }
-.section-sub {
+body:has(.page-hero) .section-sub {
   font-size: 16px;
   line-height: 1.6;
   color: rgba(242,241,236,0.68);
