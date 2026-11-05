@@ -600,7 +600,62 @@
   gap: 60px;
   align-items: end;
 }
-.authority-head .section-sub { max-width: 400px; text-align: right; }
+.authority-head .section-sub {
+  max-width: 400px;
+  text-align: right;
+  color: var(--ink);
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* Banner YouTube clicável */
+.yt-banner {
+  display: block;
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.yt-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.yt-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.2);
+}
+.yt-banner:hover img { transform: scale(1.015); }
+.yt-banner::after {
+  content: 'YOUTUBE ↗';
+  position: absolute;
+  top: 14px; right: 16px;
+  padding: 6px 10px;
+  background: rgba(11,11,9,0.7);
+  color: #F2F1EC;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+.yt-banner:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 820px) {
+  .yt-banner { margin: 0 auto 40px; border-radius: 2px; }
+  .yt-banner::after { top: 8px; right: 8px; font-size: 9px; padding: 4px 7px; }
+}
 
 .authority-grid {
   max-width: 1400px;
