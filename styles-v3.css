@@ -1145,6 +1145,13 @@ body:has(.page-hero) .nav .brand-name { color: #F2F1EC; }
 body:has(.page-hero) .nav-cta {
   background: #F2F1EC;
   color: #0B0B09;
+  transition: background 300ms var(--ease), color 300ms var(--ease);
+}
+/* Desativa o overlay original que escondia o texto; usa transição direta de cor */
+body:has(.page-hero) .nav-cta::before { display: none; }
+body:has(.page-hero) .nav-cta:hover {
+  background: #C9FF2E;
+  color: #0B0B09;
 }
 body:has(.page-hero) .side-marquee .marquee-track { color: rgba(242,241,236,0.35); }
 body:has(.page-hero) .side-marquee-left { border-right-color: rgba(242,241,236,0.08); }
