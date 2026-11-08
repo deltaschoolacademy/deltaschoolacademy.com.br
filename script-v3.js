@@ -358,3 +358,34 @@
   })();
 
 })();
+
+// ========================================================================
+// SERVIÇOS DESPACHANTE — tabs por categoria no mobile
+// ========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.svc-tab');
+  const cards = document.querySelectorAll('.svc-card');
+  if (!tabs.length || !cards.length) return;
+
+  function filter(cat) {
+    cards.forEach(card => {
+      const dc = card.dataset.cat || '';
+      if (cat === 'todos' || dc === cat) {
+        card.classList.add('visible');
+      } else {
+        card.classList.remove('visible');
+      }
+    });
+  }
+
+  // Inicializa mostrando todos
+  filter('todos');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      filter(tab.dataset.cat);
+    });
+  });
+});
