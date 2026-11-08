@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /img/documento-pf.png
+
+Sitemap: https://deltaschoolacademy.com.br/sitemap.xml
