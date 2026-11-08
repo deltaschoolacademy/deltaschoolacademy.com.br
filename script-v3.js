@@ -212,6 +212,41 @@
       const val = Math.round(eased * target);
       el.textContent = String(val).padStart(pad, '0');
       if (t < 1) requestAnimationFrame(tick);
+      else liveIncrement(el, target, pad);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // Incremento ao vivo: após a contagem inicial, números seguem subindo
+  // devagar enquanto o cliente está no site (simulando operação em andamento)
+  function liveIncrement(el, baseTarget, pad) {
+    if (reduceMotion) return;
+    // Pulsos configurados por tipo de métrica
+    // 0 continua 0 (incidentes). 100 continua 100 (certificados)
+    if (baseTarget === 0 || baseTarget === 100) return;
+    let current = baseTarget;
+    // Intervalo sutil: aumenta a cada 4-10s valor pequeno (1-3)
+    function schedule() {
+      const delay = 4000 + Math.random() * 6000;
+      setTimeout(() => {
+        const bump = 1 + Math.floor(Math.random() * 3);
+        current += bump;
+        animateBumpTo(el, current, pad);
+        schedule();
+      }, delay);
+    }
+    schedule();
+  }
+  function animateBumpTo(el, newVal, pad) {
+    const from = parseInt(el.textContent, 10) || 0;
+    const dur = 900;
+    const start = performance.now();
+    function tick(now) {
+      const t = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const val = Math.round(from + (newVal - from) * eased);
+      el.textContent = String(val).padStart(pad, '0');
+      if (t < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
   }
